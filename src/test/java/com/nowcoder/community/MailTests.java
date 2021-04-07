@@ -23,7 +23,7 @@ public class MailTests {
 
     @Test
     public void testTextMail() {
-        mailClient.sendMail("2670964500@qq.com", "NMSL", "WSND.");
+        mailClient.sendMail("657547263@qq.com", "AAAA", "BBB.");
     }
 
     @Test
