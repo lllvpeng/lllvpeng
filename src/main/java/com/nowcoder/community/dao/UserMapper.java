@@ -2,6 +2,7 @@ package com.nowcoder.community.dao;
 
 import com.nowcoder.community.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Mapper
@@ -11,7 +12,7 @@ public interface UserMapper {
     User selectByEmail(String email);
 
     int insertUser(User user);
-    int updateStatus(int id,int status);
-    int updateHeader(int id,String headUrl);
-    int updatePassword(int id,String password);
+    int updateStatus(@Param("id")int id,@Param("status")int status);
+    int updateHeader(@Param("id") int id, @Param("headerUrl") String headerUrl);
+    int updatePassword(@Param("id")int id,@Param("password")String password);
 }
